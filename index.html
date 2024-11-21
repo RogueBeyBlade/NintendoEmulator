@@ -14,11 +14,6 @@
       text-align: center;
     }
 
-    h1 {
-      margin: 20px 0;
-      font-size: 36px;
-    }
-
     .console-container {
       display: flex;
       justify-content: center;
@@ -28,13 +23,16 @@
 
     .console-card {
       background-color: #28293d;
-      border-radius: 10px;
+      border-radius: 5px; /* Reduced roundness for sharper edges */
       padding: 20px;
       margin: 10px;
       width: 200px;
       text-align: center;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .console-card:hover {
@@ -47,94 +45,18 @@
       color: #61dafb;
       font-size: 18px;
       font-weight: bold;
+      margin-top: 10px;
     }
 
     .console-card img {
       max-width: 100%;
-      border-radius: 10px;
+      height: 120px; /* Fixed height for consistency */
+      object-fit: cover; /* Ensures the image scales proportionally */
       margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Choose a Console</h1>
-  <div class="console-container">
-    <div class="console-card">
-      <a href="nes.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/NES_Controller.jpg" alt="NES">
-        NES
-      </a>
-    </div>
-    <div class="console-card">
-      <a href="snes.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/SNES-Controller-Flat.jpg" alt="SNES">
-        SNES
-      </a>
-    </div>
-    <!-- Add more consoles here -->
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Console Emulator</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #1e1e2f;
-      color: #f0f0f0;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 20px 0;
-      font-size: 36px;
-    }
-
-    .console-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 20px;
-    }
-
-    .console-card {
-      background-color: #28293d;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 10px;
-      width: 200px;
-      text-align: center;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .console-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
-    }
-
-    .console-card a {
-      text-decoration: none;
-      color: #61dafb;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .console-card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Choose a Console</h1>
   <div class="console-container">
     <div class="console-card">
       <a href="nes.html">
@@ -148,31 +70,30 @@
         SNES
       </a>
     </div>
-     <div class="console-card">
+    <div class="console-card">
       <a href="gbc.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/NES_Controller.jpg" alt="GBC">
+        <img src="https://cdn.jsdelivr.net/gh/RogueBeyBlade/nes@main/images/GBC.jpg" alt="GBC">
         GBC
       </a>
     </div>
-     <div class="console-card">
+    <div class="console-card">
       <a href="gba.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/NES_Controller.jpg" alt="GBA">
+        <img src="https://cdn.jsdelivr.net/gh/RogueBeyBlade/nes@main/images/GBA.jpg" alt="GBA">
         GBA
       </a>
     </div>
-     <div class="console-card">
+    <div class="console-card">
       <a href="nds.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/NES_Controller.jpg" alt="nds">
+        <img src="https://cdn.jsdelivr.net/gh/RogueBeyBlade/nes@main/images/NDS.jpg" alt="NDS">
         NDS
       </a>
     </div>
     <div class="console-card">
       <a href="n64.html">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/NES_Controller.jpg" alt="N64">
+        <img src="https://cdn.jsdelivr.net/gh/RogueBeyBlade/nes@main/images/N64.jpg" alt="N64">
         N64
       </a>
     </div>
-    <!-- Add more consoles here -->
   </div>
 </body>
 </html>
