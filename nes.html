@@ -89,7 +89,7 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-between; /* Ensures that the space between items is handled */
     }
 
     .console-card:hover {
@@ -104,12 +104,12 @@
       display: block;
     }
 
-    /* Text container inside console cards */
+    /* Ensure text is vertically centered */
     .console-card .text-container {
       font-size: 15px;
       font-weight: bold;
       color: #61dafb;
-      margin-top: auto; /* Ensures the text is pushed to the bottom */
+      margin-top: auto; /* Pushes the text to the bottom of the card */
     }
 
     /* Styling for links */
