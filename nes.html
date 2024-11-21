@@ -82,7 +82,7 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;  /* Center content vertically */
       height: 300px;
       position: relative;
     }
@@ -107,6 +107,17 @@
       bottom: 0px;
       left: 50%;
       transform: translateX(-50%);
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .console-card p {
+      margin: 0;
+      line-height: 1.4; /* Adjust line spacing for wrapped text */
     }
 
     .console-card a {
