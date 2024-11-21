@@ -82,7 +82,7 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
-      justify-content: center;  /* Center content vertically */
+      justify-content: space-between;
       height: 300px;
       position: relative;
     }
@@ -99,25 +99,25 @@
       display: block;
     }
 
+    /* Adjusted the text container for better vertical centering */
     .console-card .text-container {
       font-size: 15px;
       font-weight: bold;
       color: #61dafb;
       position: absolute;
-      bottom: 0px;
+      bottom: 10px; /* Adjust bottom space to ensure text isn't too close to bottom */
       left: 50%;
       transform: translateX(-50%);
       width: 80%;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      line-height: 1.4; /* Ensures good line spacing */
     }
 
     .console-card p {
       margin: 0;
-      line-height: 1.4; /* Adjust line spacing for wrapped text */
     }
 
     .console-card a {
