@@ -75,8 +75,8 @@
       background-color: #28293d;
       border-radius: 5px;
       margin: 10px;
-      width: 200px;
-      height: 300px;
+      width: 220px; /* Slightly increased width */
+      height: 320px; /* Slightly increased height */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -85,6 +85,7 @@
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       position: relative;
+      overflow: hidden; /* Ensure content fits */
     }
 
     .console-card:hover {
@@ -94,9 +95,10 @@
 
     .console-card img {
       max-width: 100%;
-      max-height: 250px; 
+      max-height: 220px; /* Adjusted to fit box size */
       margin: auto;
       display: block;
+      object-fit: contain; /* Keeps the image aspect ratio */
     }
 
     .console-card .text-container {
@@ -107,14 +109,12 @@
       font-size: 15px;
       font-weight: bold;
       color: #61dafb;
-      height: 50px; /* Added height for proper centering */
+      height: 50px; /* Consistent height for centering */
     }
 
     .console-card a {
-      text-decoration: none;
+      text-decoration: none; /* Removes underline */
       color: #61dafb;
-      font-size: 18px;
-      font-weight: bold;
     }
   </style>
 </head>
@@ -151,7 +151,6 @@
         <p>Castlevania III - Dracula's Curse</p>
       </div>
     </a>
-    <!-- More game cards go here -->
   </div>
 
   <script>
