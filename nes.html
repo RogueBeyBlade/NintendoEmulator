@@ -72,19 +72,21 @@
       text-decoration: none
     }
 
-  .console-card .text-container {
-  font-size: 15px;
-  font-weight: bold;
-  color: #61dafb;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-grow: 1; /* Keeps the element vertically centered in the remaining space */
-  line-height: 1.4;
-  padding: 20px 10px; /* Add padding to control vertical spacing */
-  margin-top: 120px; /* Use this to fine-tune the vertical position */
-}
+    .console-card {
+      background-color: #28293d;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+      width: 200px;
+      height: 300px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Ensure space between elements inside the card */
+      text-decoration: none
+    }
 
     .console-card:hover {
       transform: scale(1.05);
@@ -101,7 +103,6 @@
     }
 
     .console-card .text-container {
-      bottom: -1000px:
       font-size: 15px;
       font-weight: bold;
       color: #61dafb;
@@ -113,6 +114,7 @@
       line-height: 1.4;
       padding: 0 10px;
       text-decoration: none
+      margin-top: 1000px;
     }
 
     .console-card p {
