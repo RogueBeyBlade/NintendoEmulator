@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NES - Retro Nintendo Emulator</title>
   <style>
+    /* General body and text styling */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -14,6 +16,7 @@
       text-align: center;
     }
 
+    /* Tab bar styling */
     .tab-bar {
       display: flex;
       justify-content: center;
@@ -38,32 +41,34 @@
       color: #ffffff;
     }
 
+    /* Search bar container */
     .search-container {
       display: flex;
       justify-content: center;
       margin: 20px 0;
     }
 
-    .search-container input {
+    .search-container input,
+    .search-container button {
       padding: 10px;
-      width: 80%;
-      max-width: 400px;
       font-size: 16px;
       border-radius: 5px;
       border: none;
+    }
+
+    .search-container input {
+      width: 80%;
+      max-width: 400px;
       margin-right: 10px;
     }
 
     .search-container button {
-      padding: 10px 20px;
       background-color: #61dafb;
       color: #fff;
-      border: none;
-      font-size: 16px;
       cursor: pointer;
-      border-radius: 5px;
     }
 
+    /* Console cards container */
     .console-container {
       display: flex;
       justify-content: center;
@@ -71,10 +76,11 @@
       margin: 20px;
     }
 
+    /* Console card styling */
     .console-card {
       background-color: #28293d;
       border-radius: 5px;
-      padding: 0px 20px 20px; 
+      padding: 0px 20px 20px;
       margin: 10px;
       width: 200px;
       text-align: center;
@@ -84,7 +90,6 @@
       flex-direction: column;
       justify-content: space-between;
       height: 300px;
-      position: relative;
     }
 
     .console-card:hover {
@@ -94,21 +99,23 @@
 
     .console-card img {
       max-width: 100%;
-      max-height: 250px; 
+      max-height: 250px;
       margin: auto;
       display: block;
     }
 
+    /* Text container inside console cards */
     .console-card .text-container {
       font-size: 15px;
       font-weight: bold;
       color: #61dafb;
       position: absolute;
-      bottom: 0px;
+      bottom: 0;
       left: 50%;
       transform: translateX(-50%);
     }
 
+    /* Styling for links */
     .console-card a {
       text-decoration: none;
       color: #61dafb;
@@ -117,21 +124,27 @@
     }
   </style>
 </head>
+
 <body>
+
+  <!-- Tab Bar -->
   <div class="tab-bar">
     <button onclick="window.location.href='index.html';">Home</button>
     <button onclick="window.location.href='https://forms.gle/HzSHhXLAe2DSjZgL9';">Suggestions</button>
     <button>WIP Popular Games</button>
   </div>
 
+  <!-- Search Bar -->
   <div class="search-container">
     <input type="text" id="search-bar" placeholder="Search games...">
     <button onclick="searchGames()">Search</button>
   </div>
 
+  <!-- Heading -->
   <h1>Nintendo Entertainment System</h1>
+
+  <!-- Console Cards -->
   <div class="console-container">
-    <!-- Example Game Cards for Console -->
     <a href="game1.html" class="console-card">
       <img src="https://cdn.jsdelivr.net/gh/RogueBeyBlade/nes@main/nes%20images/Castlevania%20(USA).png" alt="Game 1">
       <div class="text-container">
@@ -150,14 +163,16 @@
         <p>Castlevania III - Dracula's Curse</p>
       </div>
     </a>
-    <!-- More game cards go here -->
   </div>
 
   <script>
+    // Search functionality placeholder
     function searchGames() {
       const searchQuery = document.getElementById('search-bar').value.toLowerCase();
       alert('Search functionality coming soon! You searched for: ' + searchQuery);
     }
   </script>
+
 </body>
+
 </html>
