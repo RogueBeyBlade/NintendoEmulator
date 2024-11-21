@@ -74,19 +74,18 @@
       display: block;
     }
 
+    .console-card a {
+      display: block; /* Ensures the entire card is clickable */
+      text-decoration: none; /* Remove underline */
+      color: inherit; /* Inherit the color from the parent */
+    }
+
     .console-card .text-container {
       position: absolute;
       bottom: 20px; /* Fixed position for the text at the bottom of the card */
       left: 50%;
       transform: translateX(-50%);
-    }
-
-    .console-card a {
-      text-decoration: none;
-      color: #61dafb;
-      font-size: 18px;
-      font-weight: bold;
-      margin-top: auto; /* Ensures text stays at the bottom of the card */
+      color: #61dafb; /* Ensure text color is set */
     }
   </style>
 </head>
