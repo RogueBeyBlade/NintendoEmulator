@@ -74,16 +74,17 @@
     .console-card {
       background-color: #28293d;
       border-radius: 5px;
-      padding: 20px;
+      padding: 0px 20px 20px; 
       margin: 10px;
       width: 200px;
-      height: 300px;
       text-align: center;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      height: 300px;
+      position: relative;
     }
 
     .console-card:hover {
@@ -93,39 +94,33 @@
 
     .console-card img {
       max-width: 100%;
-      max-height: 250px;
+      max-height: 250px; 
       margin: auto;
       display: block;
+    }
+
+    /* Link styling for anchor tags */
+    .console-card a {
+      text-decoration: none; /* No underline */
+      color: inherit; /* Inherit the color */
+    }
+
+    .console-card a:visited,
+    .console-card a:active,
+    .console-card a:hover {
+      text-decoration: none; /* No underline on hover/visited/active states */
+      color: inherit; /* Inherit the color */
     }
 
     .console-card .text-container {
       font-size: 15px;
       font-weight: bold;
       color: #61dafb;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex-grow: 1;
-      line-height: 1.4;
-      padding: 0 10px;
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
     }
-
-    .console-card p {
-      margin: 0;
-    }
-
-    /* Ensure that the anchor tags inside the console-card have no underline or color */
-    .console-card a {
-      text-decoration: none !important;
-      color: inherit !important;
-    }
-
-    .console-card a:visited, .console-card a:active, .console-card a:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
   </style>
 </head>
 <body>
@@ -142,6 +137,7 @@
 
   <h1>Nintendo Entertainment System</h1>
   <div class="console-container">
+    <!-- Example Game Cards for Console -->
     <a href="game1.html" class="console-card">
       <img src="https://cdn.jsdelivr.net/gh/RogueBeyBlade/nes@main/nes%20images/Castlevania%20(USA).png" alt="Game 1">
       <div class="text-container">
@@ -160,7 +156,6 @@
         <p>Castlevania III - Dracula's Curse</p>
       </div>
     </a>
-    <!-- More game cards go here -->
   </div>
 
   <script>
