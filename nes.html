@@ -83,7 +83,7 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
-      justify-content: space-between; /* Ensure space between elements inside the card */
+      justify-content: space-between;
     }
 
     .console-card:hover {
@@ -93,7 +93,7 @@
 
     .console-card img {
       max-width: 100%;
-      max-height: 250px; 
+      max-height: 250px;
       margin: auto;
       display: block;
     }
@@ -106,7 +106,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      flex-grow: 1; /* Make sure the text container takes up available space */
+      flex-grow: 1;
       line-height: 1.4;
       padding: 0 10px;
     }
@@ -117,9 +117,7 @@
 
     .console-card a {
       text-decoration: none;
-      color: #61dafb;
-      font-size: 18px;
-      font-weight: bold;
+      color: inherit;
     }
   </style>
 </head>
@@ -137,7 +135,6 @@
 
   <h1>Nintendo Entertainment System</h1>
   <div class="console-container">
-    <!-- Example Game Cards for Console -->
     <a href="game1.html" class="console-card">
       <img src="https://cdn.jsdelivr.net/gh/RogueBeyBlade/nes@main/nes%20images/Castlevania%20(USA).png" alt="Game 1">
       <div class="text-container">
