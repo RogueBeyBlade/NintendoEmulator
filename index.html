@@ -32,7 +32,9 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       align-items: center;
+      height: 260px; /* Fixed card height for consistent layout */
     }
 
     .console-card:hover {
@@ -50,9 +52,9 @@
 
     .console-card img {
       max-width: 100%;
-      height: 120px; /* Fixed height for consistency */
-      object-fit: cover; /* Ensures the image scales proportionally */
-      margin-bottom: 10px;
+      max-height: 150px; /* Ensures images fit within a uniform height */
+      margin: auto;
+      display: block;
     }
   </style>
 </head>
