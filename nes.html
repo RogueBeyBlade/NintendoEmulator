@@ -74,17 +74,16 @@
     .console-card {
       background-color: #28293d;
       border-radius: 5px;
-      padding: 0px 20px 20px; 
+      padding: 20px;
       margin: 10px;
       width: 200px;
+      height: 300px;
       text-align: center;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 300px;
-      position: relative;
+      justify-content: space-between; /* Ensure space between elements inside the card */
     }
 
     .console-card:hover {
@@ -99,21 +98,17 @@
       display: block;
     }
 
-    /* Adjusted the text container for better vertical centering */
     .console-card .text-container {
       font-size: 15px;
       font-weight: bold;
       color: #61dafb;
-      position: absolute;
-      bottom: 10px; /* Adjust bottom space to ensure text isn't too close to bottom */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      line-height: 1.4; /* Ensures good line spacing */
+      flex-grow: 1; /* Make sure the text container takes up available space */
+      line-height: 1.4;
+      padding: 0 10px;
     }
 
     .console-card p {
