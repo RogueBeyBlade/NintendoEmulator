@@ -107,10 +107,13 @@
       bottom: 20px; /* Ensures space from the bottom */
       left: 50%;
       transform: translateX(-50%);
-      width: 100%; /* Ensures the container takes up the full width */
+      width: 80%; /* Ensures text fits properly */
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: center; /* Vertically centers the text */
       align-items: center;
+      text-align: center;
+      margin-top: auto; /* Pushes text to the bottom */
     }
 
     .console-card p {
@@ -150,7 +153,7 @@
     <a href="game2.html" class="console-card">
       <img src="https://cdn.jsdelivr.net/gh/RogueBeyBlade/nes@main/nes%20images/Castlevania%20II%20(USA).png" alt="Game 2">
       <div class="text-container">
-        <p>Castlevania II - Simon's Quest this text is long</p>
+        <p>Castlevania II - Simon's Quest</p>
       </div>
     </a>
     <a href="game3.html" class="console-card">
