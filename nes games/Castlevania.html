@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Castlevania - Emulator</title>
+    <style>
+      /* Basic body styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1e1e2f;
+        color: #f0f0f0;
+        text-align: center;
+      }
+
+      /* Tab bar styles */
+      .tab-bar {
+        display: flex;
+        justify-content: center;
+        background-color: #28293d;
+        padding: 10px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .tab-bar button {
+        background-color: transparent;
+        border: none;
+        color: #61dafb;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      .tab-bar button:hover {
+        background-color: #1e1e2f;
+        color: #ffffff;
+      }
+
+      /* Emulator container styling */
+      .container {
+        margin: 20px auto;
+        width: 640px;
+        height: 480px;
+        max-width: 90%;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+      }
+
+      #game {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <button onclick="window.location.href='index.html';">Home</button>
+      <button onclick="window.location.href='https://forms.gle/HzSHhXLAe2DSjZgL9';">
+        Suggestions
+      </button>
+      <button>WIP Popular Games</button>
+    </div>
+
+    <!-- Emulator Container -->
+    <div class="container">
+      <div id="game"></div>
+    </div>
+
+    <!-- EmulatorJS Script Configuration -->
+    <script type="text/javascript">
+      EJS_player = "#game"; // The container where the emulator will run
+      EJS_core = "nes"; // NES emulator core
+      EJS_gameUrl =
+        "https://cdn.jsdelivr.net/gh/RogueBeyBlade/School-Entertainment@refs/heads/main/nes%20roms/Castlevania.nes"; // ROM URL
+      EJS_pathtodata =
+        "https://cdn.jsdelivr.net/gh/ethanaobrien/emulatorjs@main/data/"; // Path to EmulatorJS data
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/ethanaobrien/emulatorjs@main/data/loader.js"></script>
+
+    <!-- Disable arrow keys for scrolling -->
+    <script>
+      window.addEventListener("keydown", function (e) {
+        const keysToPrevent = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
+        if (keysToPrevent.includes(e.key)) {
+          e.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>
