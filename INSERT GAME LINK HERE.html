@@ -4,49 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game To Be Determined</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS file -->
 </head>
 <body>
     <header>
         <nav>
             <a href="index.html">Home</a>
-            <a href="suggestions.html">Suggestions</a>
-            <a href="popular.html">Popular</a>
+            <button onclick="comingSoon('Suggestions')">Suggestions</button>
+            <button onclick="comingSoon('Popular')">Popular</button>
         </nav>
     </header>
     <main>
         <h1>Game To Be Determined</h1>
         <p>Check back later for updates!</p>
     </main>
+    <footer>
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function comingSoon(section) {
+            alert(section + " feature is coming soon!");
+        }
+    </script>
 </body>
 </html>
