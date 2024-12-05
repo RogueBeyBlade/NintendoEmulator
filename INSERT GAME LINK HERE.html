@@ -1,37 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game To Be Determined</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Your main CSS file -->
-</head>
-<body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="navbar">
-            <a class="nav-link" href="index.html">Home</a>
-            <button class="nav-button" onclick="comingSoon('Suggestions')">Suggestions</button>
-            <button class="nav-button" onclick="comingSoon('Popular')">Popular</button>
-        </header>
+    <style>
+      /* Basic body styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1e1e2f;
+        color: #f0f0f0;
+        text-align: center;
+      }
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <h1>Game To Be Determined</h1>
-            <p>Stay tuned! More games and features are coming soon.</p>
-        </main>
+      /* Tab bar styles */
+      .tab-bar {
+        display: flex;
+        justify-content: center;
+        background-color: #28293d;
+        padding: 10px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      }
 
-        <!-- Footer Section -->
-        <footer class="footer">
-            <p>&copy; 2024 Your Emulator Website. All rights reserved.</p>
-        </footer>
+      .tab-bar button {
+        background-color: transparent;
+        border: none;
+        color: #61dafb;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      .tab-bar button:hover {
+        background-color: #1e1e2f;
+        color: #ffffff;
+      }
+
+      /* Title styles */
+      .title {
+        margin: 20px auto;
+        font-size: 48px;
+        color: #61dafb;
+        max-width: 90%; /* Allow text to stretch further across the screen */
+        line-height: 1.2;
+      }
+
+      /* Placeholder content styling */
+      .placeholder {
+        margin: 40px auto;
+        font-size: 24px;
+        color: #d3d3d3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <button onclick="window.location.href='https://nintendoemulator.netlify.app';">Home</button>
+      <button onclick="window.location.href='https://forms.gle/HzSHhXLAe2DSjZgL9';">
+        Suggestions
+      </button>
+      <button>WIP Popular Games</button>
     </div>
 
-    <script>
-        // Alert for "Coming Soon" features
-        function comingSoon(section) {
-            alert(section + " feature is coming soon!");
-        }
-    </script>
-</body>
+    <!-- Title -->
+    <h1 class="title">Game To Be Determined</h1>
+
+    <!-- Placeholder Content -->
+    <div class="placeholder">
+      <p>This is a placeholder page for a game to be determined.</p>
+      <p>Copy and paste your template code here when needed!</p>
+    </div>
+  </body>
 </html>
