@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game To Be Determined</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS file -->
+    <link rel="stylesheet" href="styles.css"> <!-- Your main CSS file -->
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <button onclick="comingSoon('Suggestions')">Suggestions</button>
-            <button onclick="comingSoon('Popular')">Popular</button>
-        </nav>
-    </header>
-    <main>
-        <h1>Game To Be Determined</h1>
-        <p>Check back later for updates!</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
-    </footer>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="navbar">
+            <a class="nav-link" href="index.html">Home</a>
+            <button class="nav-button" onclick="comingSoon('Suggestions')">Suggestions</button>
+            <button class="nav-button" onclick="comingSoon('Popular')">Popular</button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Game To Be Determined</h1>
+            <p>Stay tuned! More games and features are coming soon.</p>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2024 Your Emulator Website. All rights reserved.</p>
+        </footer>
+    </div>
 
     <script>
+        // Alert for "Coming Soon" features
         function comingSoon(section) {
             alert(section + " feature is coming soon!");
         }
