@@ -190,7 +190,7 @@
 
     // Function to update the counter when a game is clicked
     function updateCounter(gameFileName) {
-      fetch("/.netlify/functions/updateCounter", {
+      fetch("netlify/functions/updateCounter", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
