@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GBC - Retro Nintendo Emulator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1e1e2f;
+      color: #f0f0f0;
+      text-align: center;
+    }
+
+    .tab-bar {
+      display: flex;
+      justify-content: center;
+      background-color: #28293d;
+      padding: 10px 0;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .tab-bar button {
+      background-color: transparent;
+      border: none;
+      color: #61dafb;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .tab-bar button:hover {
+      background-color: #1e1e2f;
+      color: #ffffff;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .search-container input {
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 10px;
+    }
+
+    .search-container button {
+      padding: 10px 20px;
+      background-color: #61dafb;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .console-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px;
+      text-decoration: none
+    }
+
+    .console-card {
+      background-color: #28293d;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+      width: 200px;
+      height: 250px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Ensure space between elements inside the card */
+      text-decoration: none
+    }
+
+    .console-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+      text-decoration: none
+    }
+
+    .console-card img {
+      max-width: 100%;
+      max-height: 200px; 
+      margin: auto;
+      display: block;
+      text-decoration: none
+    }
+
+    .console-card .text-container {
+      font-size: 15px;
+      font-weight: bold;
+      color: #61dafb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-grow: 1; /* Make sure the text container takes up available space */
+      line-height: 1.4;
+      margin-bottom: -20px;
+      padding: 0 10px;
+      text-decoration: none
+    }
+
+    .console-card p {
+      margin: 0;
+      text-decoration: none
+    }
+
+    .console-card a {
+      text-decoration: none;
+      color: #61dafb;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none
+    }
+  </style>
+</head>
+<body>
+  <div class="tab-bar">
+    <button onclick="window.location.href='index.html';">Home</button>
+    <button onclick="window.location.href='https://forms.gle/HzSHhXLAe2DSjZgL9';">Suggestions</button>
+    <button>WIP Popular Games</button>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search-bar" placeholder="Search games...">
+    <button onclick="searchGames()">Search</button>
+  </div>
+
+  <h1>Gameboy Color</h1>
+  <div class="console-container">
+    <!-- Example Game Cards for Console -->
+    <a href="gbc%20games/Street_Fighter_Alpha_-_Warriors'_Dreams.html" class="console-card" data-game="Street_Fighter_Alpha_-_Warriors'_Dreams.html">
+      <img src="gbc%20images/Street%20Fighter%20Alpha%20-%20Warriors'%20Dreams%20(USA).png" alt="Game TBD">
+      <div class="text-container">
+        <p>Street Fighter Alpha - Warriors' Dreams</p>
+      </div>
+    </a>
+    <a href="gbc%20games/Mortal_Kombat_4(GBC).html" class="console-card" data-game="Mortal_Kombat_4(GBC).html">
+      <img src="gbc%20images/Mortal%20Kombat%204%20(USA,%20Europe)%20(SGB%20Enhanced)%20(GB%20Compatible).png" alt="Game TBD">
+      <div class="text-container">
+        <p>Mortal Kombat 4</p>
+      </div>
+    </a>
+    <a href="gbc%20games/Donkey_Kong_Country(GBC).html" class="console-card" data-game="Donkey_Kong_Country(GBC).html">
+      <img src="gbc%20images/Donkey%20Kong%20Country%20(USA,%20Europe)%20(En,Fr,De,Es,It)%20(Sample).png" alt="Game TBD">
+      <div class="text-container">
+        <p>Donkey Kong Country</p>
+      </div>
+    </a>
+    <a href="INSERT LINK HERE" class="console-card" data-game="To_Be_Determined.html">
+      <img src="INSERT IMAGE HERE" alt="Game TBD">
+      <div class="text-container">
+        <p>To Be Determined</p>
+      </div>
+    </a>
+    <!-- More game cards go here -->
+  </div>
+
+  <script>
+    // Function to handle search (to be implemented later)
+    function searchGames() {
+      const searchQuery = document.getElementById('search-bar').value.toLowerCase();
+      alert('Search functionality coming soon! You searched for: ' + searchQuery);
+    }
+
+    // Add event listeners to all game cards for tracking clicks
+    document.querySelectorAll('.console-card').forEach((gameCard) => {
+      gameCard.addEventListener('click', function() {
+        const gameFileName = this.dataset.game; // Get the game file name from the data-game attribute
+        updateCounter(gameFileName);
+      });
+    });
+
+    // Function to update the counter when a game is clicked
+    function updateCounter(gameFileName) {
+      fetch("/.netlify/functions/updateCounter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ game: gameFileName }),
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error("Error updating counter:", error));
+    }
+  </script>
+</body>
+</html>
